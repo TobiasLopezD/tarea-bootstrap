@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+html{
+
+    background-color: beige;
+}
+
+.contanier {
+    background-color: beige;
+
+}
+.jumbotron {
+    color: green;
+
+}
+
+p{
+    color: black;
+
+}
