@@ -8,18 +8,57 @@
 html{
 
     background-color: beige;
+
 }
+
+h3 h4 p {
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
 
 .contanier {
     background-color: beige;
 
 }
-.jumbotron {
+.contenedor {
     color: green;
+    border: 1px solid aqua;
+    padding: 20px;
+    margin:5px;
+}
+
+.list {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 5px;
+    transition: transform .5s;
+    /*Animation*/width: 400px;
+    height: 200px;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
+}
+
+.list:hover{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+
+.grid{
+    display: grid;
+
 
 }
 
-p{
-    color: black;
+.grid-template {
+
+    grid-template-columns: repeat(3,1fr);
 
 }
