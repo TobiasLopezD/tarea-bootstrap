@@ -17,10 +17,16 @@
             <div class="contenedor grid grid-template">
                 <div class="list">
                     <h4>1.</h4>
-                    <p>Contexto</p>
+                    <p>Determina que el contenedor va a ser un grid
+                    
+                        .container {
+                            display: grid / inline-grid
+                        }
+                    
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>2.</h4>
+                    <h4>2.grid</h4>
                     <p>Contexto</p>
                 </div>
                 <div class="list">
@@ -79,55 +85,113 @@
             <p> Lista de comandos</p>
             <div class="contenedor grid grid-template">
                 <div class="list">
-                    <h4>1.</h4>
-                    <p>Contexto</p>
+                    <h4>1. Display</h4>
+                    <p>Define un contenedor flexible, permitiendo alinear sus hijos directos de la forma que determinemos.
+                    
+                        .container {
+                            
+                            display:flex / inline-flex; 
+                        
+                        }
+
+                    </p>
                     
                 </div>
                 <div class="list">
-                    <h4>2.</h4>
-                    <p>Contexto</p>
+                    <h4>2.Flex-direction / flex-wrap</h4>
+                    <p> Direccion de los item en fila o columna.
+                        
+
+                        .container{
+                            flex-direction: row / row-reverse / column / column-reverse;
+
+                        }
+
+                        .container{
+                            flex-wrap: nowrap / wrap / wrap-reverse;
+
+                        }
+
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>3.</h4>
-                    <p>Contexto</p>
+                    <h4>3.Flex-flow (flex-direction + flex-wrap)</h4>
+                    <p> .container{
+                        flex-flow: row (flex-direction) wrap (flex-wrap);    
+                    }
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>4.</h4>
-                    <p>Contexto</p>
+                    <h4>4.Justify-content / Align-item</h4>
+                    <p>Alinea los item en sentido horizontal y vertical.
+
+                        .container {
+                            /* Alineacion horizontal de los items */
+                            justify-content: flex-start / flex-end / center / space-between / space-around / space-evenly
+                        }
+
+                        .container{
+                            /*Alineacion vertical de los items
+                            align-items: flex-start / flex-end / center / stretch / baseline
+                        }
+
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>5.</h4>
-                    <p>Contexto</p>
+                    <h5>5. Align-content</h5>
+                    <p> Alinea los items en sentido vertical y horizontal
+
+                        .container{
+
+                            align-content:flex-start / flex-end / center / space-between / space-around / stretch; 
+
+                        }
+
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>6.</h4>
-                    <p>Contexto</p>
+                    <h4>6.flex-grow / flex-shink / flex-basis</h4>
+                    <p> .item:nth-child(4) {
+
+                        /*Define en que proporcion crece un item */
+                        flex-grown: 3 (numero); /* por defecto es 0 */
+                    }
+
+                    .item{
+
+                        /*Define la capacidad de un objeto flexible para contraerse si es necesario */
+                        flex-shrink: 2 (numero); /*por defecto es 1 */
+
+                        /*Define la capacidad de un objeto flexible para contraerse si es necesario */
+                        flex-basis: auto / 10% / 5rem;
+
+                    }
+
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>7.</h4>
-                    <p>Contexto</p>
+                    <h4>7. Order </h4>
+                    <p> .item {
+                        /*Orden de los items, permitiendo colocar un elemento en un orden diferente al que le corresponde en el codigo */
+                        order: 5 (numero); /* por defecto es 0 */
+                    
+                    }</p>
 
                 </div>
                 <div class="list">
-                    <h4>8.</h4>
-                    <p>Contexto</p>
+                    <h4>8.align-self</h4>
+                    <p>Permite alinear de forma individual un elemento
+
+                        .item:nth-child (3) {
+                            align-self: auto / flex-start / flex-end / center / baseline / stretch;
+
+
+                        }
+
+                    </p>
                 </div>
-                <div class="list">
-                    <h4>9.</h4>
-                    <p>Contexto</p>
-                </div>
-                <div class="list">
-                    <h4>10.</h4>
-                    <p>Contexto</p>
-                </div>
-                <div class="list">
-                    <h4>11.</h4>
-                    <p>Contexto</p>
-                </div>
-                <div class="list">
-                    <h4>12.</h4>
-                    <p>Contexto</p>
-                </div>
+              
+        
 
             </div>
 
