@@ -11,12 +11,12 @@
     <div class="contanier">
         <div class="jumbotron">
             <h3 class="display-3">
-                Comandos Flex
+                Comandos Grid
             </h3>
             <p> Lista de comandos</p>
             <div class="contenedor grid grid-template">
                 <div class="list">
-                    <h4>1.</h4>
+                    <h4>1.Display</h4>
                     <p>Determina que el contenedor va a ser un grid
                     
                         .container {
@@ -26,61 +26,168 @@
                     </p>
                 </div>
                 <div class="list">
-                    <h4>2.grid</h4>
-                    <p>Contexto</p>
-                </div>
-                <div class="list">
-                    <h4>3.</h4>
-                    <p>Contexto</p>
-                </div>
-                <div class="list">
-                    <h4>4.</h4>
-                    <p>Contexto</p>
-                </div>
-                <div class="list">
-                    <h4>5.</h4>
-                    <p>Contexto</p>
-                </div>
-                <div class="list">
-                    <h4>6.</h4>
-                    <p>Contexto</p>
-                </div>
-                <div class="list">
-                    <h4>7.</h4>
-                    <p>Contexto</p>
+                    <h4>2. Grid- template</h4>
+                    <p>Define el ancho/alto de las filas/ columnas del grid
+                        .container {
+                            grid-template-columns:150px 1000px 250px; /*columnas */
+                            grid-template-rows:25% 100px auto; /*filas */
+                            grid-template-areas: "header header header"
+                                                    "menu main sidebar"
+                                                    "footer footer footer"; /*ares*/  
+                        }
 
+                        /* El valor ancho/alto se puede indicar con diferentes formatos */
+                            
+                        grid-template-columns: 25% 50% 25% /* porcentaje */
+                        grid-template-rows:1fr 3fr 1fr; /* tracks flexibles */
+                        grid-template-columns: repeat (3,200px); /* 3 columnas de 200px */
+                        grid-template-rows: min-content max-content; /*relativo al contenido */
+                        grid-template-columns: minmax (150px,1000px) 1fr; /* rango minimo y maximo */
+
+
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>8.</h4>
-                    <p>Contexto</p>
+                    <h4>3.Grid-gap</h4>
+                    <p>Define el tamano del espacio entre las filas/columnas del grid
+                        .container {
+                            grid-row-gap: 10px; /* carril de las filas */
+                            grid-column-gap: 20px; /* carril de las columnas */
+                            grid-gap: 10px 20px;  /* carril de las filas y columnas */
+                        }
+
+
+
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>9.</h4>
-                    <p>Contexto</p>
+                    <h4>4.justify-items / align-items</h4>
+                    <p>Alinea o justifica las filas/columnas del grid
+                        .container {
+                            justify-items: start / end / center / stretch (default);
+
+                        }
+
+                        .container {
+                            align-items: start / end / center / stretch (default);  
+
+                        }
+                        
+
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>10.</h4>
-                    <p>Contexto</p>
+                    <h4>5. justify-content / align-content</h4>
+                    <p>Alinea o justifica las filas/columnas del grid 
+                        .container {
+                            justify-content: start / end / center / stretch (default);
+                                            space-around / space-between / space-evenly;
+                        }
+
+                        .container {
+                            align-content: start / end / center / stretch (default);  
+                                            space-around / space-between / space-evenly;
+                        }
+                        
+                    
+                    
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>11.</h4>
-                    <p>Contexto</p>
+                    <h4>6.grid-auto-flow</h4>
+                    <p> Coloca automaticamente elementos que no estan explicitamente ubicados
+                        .container {
+                            grid-auto-flow: row / column / dense;
+
+
+                        }
+
+                    </p>
                 </div>
                 <div class="list">
-                    <h4>12.</h4>
-                    <p>Contexto</p>
+                    <h4>7. grid-row / grid-column / grid-column + grid-row</h4>
+                    <p>Indica la ubicacion basada en columnas/filas dentro del grid
+                        /*Teniendo en cuenta un grid de 3 columnas y 3 filas */
+                        .item-1 {
+                            /* columnas 1 - filas 1 y 2 */
+                            grid-row-start: span 2;
+                        }
+
+                        .item-2 {
+                            /* columnas 1 - filas 2 y 3 */
+                            grid-row-start: 2;
+                            grid-row-end: 4;
+                        }
+    
+    
+                        .item-3 {
+                            /* columnas 1 - filas 1,2 y 3 */
+                            grid-row: 1/4 / 1 /span 3;
+                            
+                        }
+                        
+                    </p>
+                </div>
+                <div class="list">
+                    <h4>grid-row / grid-column / grid-column + grid-row</h4>
+                    <p>
+                    /*Teniendo en cuenta un grid de 3 columnas y 3 filas */
+                    .item-1 {
+                        /* columnas 1 y 2 - fila 1 */
+                        grid-column-start: span 2;
+                    }
+
+                    .item-2 {
+                        /* columnas 3 - fila 1 */
+                        grid-column-start: 3;
+                        grid-column-end: 4;
+                    }
+
+
+                    .item-3 {
+                        /* columnas 1, 2 y 3 - fila 1 */
+                        grid-row: 2 / 4 /  2 / span 3;
+                        
+                    }
+                    
+                    
+
+                    </p>
+                </div>
+                <div class="list">
+                    <h4>grid-row / grid-column / grid-column + grid-row</h4>
+                    <p>
+                        /*Teniendo en cuenta un grid de 3 columnas y 3 filas */
+                        .item {
+                            /* Columnas 1, 2 y 3 - filas 2 y 3 */
+                            grid-column: 1 / span 3;
+                            grid-row: 2 / span 2;
+                        }
+                        
+                    </p>
+                </div>
+                <div class="list">
+                    <h4>8. Justify-self / align-self</h4>
+                    <p>Alinea vertical u horizontalmente el contenido de una cuadricula
+                        .item-a {
+                            justify-self: start / end / center / stretch (default)
+                        }
+    
+                        .item-a {
+                            align-self: start / end / center / stretch (default)
+                            
+                        }
+    
+                    </p>
                 </div>
 
             </div>
-
-            
-            
 
 
         </div>
         <div class="jumbotron">
             <h3 class="display-3">
-                Comandos Grid
+                Comandos Flex
             </h3>
             <p> Lista de comandos</p>
             <div class="contenedor grid grid-template">
@@ -190,7 +297,6 @@
 
                     </p>
                 </div>
-              
         
 
             </div>

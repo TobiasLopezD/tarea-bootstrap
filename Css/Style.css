@@ -35,7 +35,7 @@ h3 h4 p {
     margin: 5px;
     transition: transform .5s;
     /*Animation*/width: 400px;
-    height: 280px;
+    height: 400px;
     -webkit-transition: transform .5s;
     -moz-transition: transform .5s;
     -ms-transition: transform .5s;
